@@ -1,0 +1,425 @@
+/* ----- Global Styles -----  */
+
+/* ----- Variables Start ----- */
+
+:root {
+
+    /* Colors */
+
+    --clr-primary: #49a6e9;
+    --clr-secondary: hsla(182, 63%, 54%);;
+    --clr-white: #ffffff;
+    --clr-gray-bg: hsl(210, 36%, 96%);
+    --clr-gray-copy: hsl(209, 61%, 16%);
+    --clr-black: #222222;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light:  hsl(125, 71%, 66%);
+
+    /* Colors */
+
+    /* Fonts */
+
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-secondary: 'Open Sans', sans-serif;
+
+    /* Fonts */
+
+    /* Animation */
+
+    --transition: all 0.3s linear;
+
+    /* Animation */
+
+    /* Shadows */
+
+    --light-shadow: 0 5px 15px rgba(0,0,0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0,0,0, 0.2);
+
+    /* Shadows */
+
+
+    /* Miscellaneous */
+
+    --radius: 0.5rem
+
+    /* Miscellaneous */
+
+
+}
+
+/* ----- Variables End ----- */
+
+
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+
+/* Google Font */
+
+/* Reset Styles */
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--clr-gray-bg);
+    color: var(--clr-gray-copy);
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+}
+
+/* Reset Styles */
+
+
+/* ----- Main Styles ----- */
+
+
+/* ========== Home Section ========== */
+
+#home {
+    background: linear-gradient(rgba(63,208,212,0.5), rgba(0,0,0, 0.7)), url(img/hero-bcg.jpeg) center/cover no-repeat;
+    min-height: 100vh;
+}
+
+/* Nav Section */
+
+.nav {
+    padding: 15px 25px;
+    background-color: var(--clr-white);
+    box-shadow: var(--dark-shadow);
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+
+.nav-header img {
+    width: 50px;
+}
+
+/* Logo */
+
+
+/* Button */
+
+.hamb-menu {
+    background-color: transparent;
+    border: none;
+    transition: var(--transition);
+    font-size: 2rem;
+}
+
+.hamb-menu:hover {
+    color: var(--clr-primary);
+}
+
+/* Button */
+
+.links-container {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.class-link {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    color: var(--clr-gray-copy);
+    transition: var(--transition);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+/* Nav Section */
+
+
+/* ========== Home Section ========== */
+
+
+/* ========== Banner Section ========== */
+
+.banner {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+/* Container */
+
+.container h1 {
+    font-size: 3.5rem;
+    color: var(--clr-white);
+    text-transform: uppercase;
+}
+
+.container p {
+    color: var(--clr-white);
+    max-width: 30rem;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+/* Container */
+
+/* Explore Button */
+
+.btn {
+    padding: 5px 10px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--clr-white);
+    border: 1px solid var(--clr-white);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-secondary);
+}
+
+/* Explore Button */
+
+/* ========== Banner Section ========== */
+
+
+/* ========== Sections ========== */
+
+#about, #services, #tours {
+    height: 80vh;
+}
+
+.section-title h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.section-title h2 span {
+    color: var(--clr-secondary);
+}
+
+#services {
+    background-color: var(--clr-white);
+}
+
+/* ========== Sections ========== */
+
+/* ========== Footer Section ========== */
+
+footer {
+    padding: 50px 25px;
+    background-color: var(--clr-gray-copy);
+}
+
+footer p {
+    color: var(--clr-white);
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+/* ========== Footer Section ========== */
+
+/* ========== Back to Top Button ========== */
+
+.top-link {
+    visibility: hidden;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+    border-radius: var(--radius);
+    font-size: 2rem;
+    color: var(--clr-white);
+    background-color: var(--clr-secondary);
+    cursor: pointer;
+}
+
+/* ========== Back to Top Button ========== */
+
+
+/* ========== Media Queries ========== */
+
+@media screen and (min-width: 600px) {
+
+    .container h1 {
+        font-size: 5rem;
+    }
+
+    .container p {
+        font-size: 1.4rem;
+        max-width: 400px;
+    }
+
+    .section-title h2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .container h1 {
+        font-size: 7rem;
+    }
+
+    .container p {
+        font-size: 1.4rem;
+        max-width: 500px
+    }
+
+    .section-title h2 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+    .nav {
+        background-color: transparent;
+        box-shadow: unset;
+        padding: 15px 50px;
+    }
+
+    .nav-header img {
+        width: 80px;
+    }
+
+    .hamb-menu {
+        display: none;
+    }
+
+    .container p {
+        font-size: 1.4rem;
+        max-width: 500px;
+        margin-bottom: 40px;
+    }
+
+    .btn {
+        font-size: 1.6rem;
+        padding: 10px 20px;
+    }
+
+    .nav-center {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .links-container {
+        display: block;
+        height: auto;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+    
+    .class-link {
+        font-size: 1.4rem;
+        font-weight: 700;
+        transition: var(--transition);
+    }
+
+    .class-link:hover {
+        color: var(--clr-secondary);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .nav {
+        padding: 25px 150px;
+     }
+
+    .container h1 {
+        font-size: 8rem;
+    }
+
+    .container p {
+        font-size: 1.6rem;
+        max-width: 600px
+    }
+
+    .section-title h2 {
+        font-size: 5rem;
+    }
+
+    .class-link {
+        font-size: 1.6rem;
+    }
+}
+
+/* ========== Media Queries ========== */
+
+
+/* ========== Helpers ========== */
+
+.show-menu {
+    height: 120px;
+    margin-top: 20px;
+    transition: var(--transition);
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--clr-white);
+    box-shadow: var(--light-shadow);
+}
+
+.show-link {
+    visibility: visible;
+    z-index: 100;
+}
+
+/* ========== Helpers ========== */
